@@ -9,6 +9,8 @@ zero_path=$2
 # setup GPU settings
 export CUDA_VISIBLE_DEVICES=0
 
+echo Zero Path: $zero_path
+
 # Note for `output_dir="avg"`
 # output_dir denotes the trained model's directory; and "avg" denotes averaged checkpoints
 # this can be obtained by running ${zero_path}/scripts/checkpoint_averaging.py
@@ -22,6 +24,8 @@ src=$1
 ref=$2
 out=$3
 yy=$4
+
+echo DECODING
 
 python ${zero_path}/run.py --mode test --parameters=\
 hidden_size=512,embed_size=512,filter_size=2048,\
@@ -61,7 +65,7 @@ output_dir="avg",\
 test_output="${out}.trans.bpe.txt",\
 
 python3 ${zero_path}/scripts/spm_decode.py \
-    --model ${data_path}/sentencepiece.bpe.model \
+    --model ${data_path}/sentencepiece.model \
     --input ${out}.trans.bpe.txt \
     --input_format piece > ${out}.trans.post.txt
 
@@ -76,6 +80,7 @@ sacrebleu ${ref} ${scarebleu_options} < ${out}.trans.post.txt > ${out}.trans.pos
 
 
 # zero-short evaluation
+echo ${zero_shot_langs}
 test_set_name="zero-shot"
 for x in ${zero_shot_langs}; do
     for y in ${zero_shot_langs}; do
@@ -83,11 +88,16 @@ for x in ${zero_shot_langs}; do
             continue
         fi
 
-        src=${data_path}/test/zero-shot/${x}-${y}/opus.bpe.${x}
-        ref=${data_path}/test/zero-shot/${x}-${y}/opus.${y}
+        #src=${data_path}/test/zero-shot/${x}-${y}/opus.bpe.${x}
+        src=${data_path}/test/zero-shot/${x}-${y}/opus.${x}-${y}-test.${x}
+        #ref=${data_path}/test/zero-shot/${x}-${y}/opus.${y}
+        ref=${data_path}/test/zero-shot/${x}-${y}/opus.${x}-${y}-test.${y}
         out=${test_set_name}.${x}2${y}.zero
-
+        
         if [[ ! -f ${src} ]]; then
+            echo src: $src
+            echo ref: $ref
+            echo out: $out
             continue
         fi
 
