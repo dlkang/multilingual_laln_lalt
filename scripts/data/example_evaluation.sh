@@ -27,7 +27,7 @@ yy=$4
 
 echo DECODING
 
-python ${zero_path}/run.py --mode test --parameters=\
+python2 ${zero_path}/run.py --mode test --parameters=\
 hidden_size=512,embed_size=512,filter_size=2048,\
 dropout=0.1,label_smooth=0.1,attention_dropout=0.1,relu_dropout=0.1,\
 max_len=256,batch_size=80,eval_batch_size=64,\

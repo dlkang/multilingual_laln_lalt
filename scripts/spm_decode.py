@@ -19,8 +19,6 @@ def main():
     parser.add_argument("--input", required=True, help="input file to decode")
     parser.add_argument("--input_format", choices=["piece", "id"], default="piece")
     args = parser.parse_args()
-    
-    print("DECODE ENTERED")
 
     sp = spm.SentencePieceProcessor()
     sp.Load(args.model)
