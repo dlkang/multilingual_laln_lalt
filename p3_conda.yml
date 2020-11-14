@@ -1,42 +1,42 @@
-name: p3_conda
+name: /home/daniel/Programming/CS695_NLP/assignment3/p3_conda
 channels:
   - powerai
   - conda-forge
   - defaults
 dependencies:
-  - _libgcc_mutex=0.1=main
-  - blas=1.0=mkl
-  - ca-certificates=2020.11.8=ha878542_0
-  - certifi=2020.11.8=py38h578d9bd_0
-  - gperftools=2.7=h767d802_2
-  - intel-openmp=2020.2=254
-  - ld_impl_linux-64=2.33.1=h53a641e_7
-  - libedit=3.1.20191231=h14c3975_1
-  - libffi=3.3=he6710b0_2
-  - libgcc-ng=9.1.0=hdf63c60_0
-  - libstdcxx-ng=9.1.0=hdf63c60_0
-  - mkl=2020.2=256
-  - mkl-service=2.3.0=py38he904b0f_0
-  - mkl_fft=1.2.0=py38h23d657b_0
-  - mkl_random=1.1.1=py38h0573a6f_0
-  - ncurses=6.2=he6710b0_1
-  - numpy=1.19.2=py38h54aff64_0
-  - numpy-base=1.19.2=py38hfa32c7d_0
-  - openssl=1.1.1h=h516909a_0
-  - perl=5.32.0=h36c2ea0_0
-  - pip=20.2.4=py38h06a4308_0
-  - portalocker=2.0.0=py38_0
-  - python=3.8.5=h7579374_1
-  - python_abi=3.8=1_cp38
-  - readline=8.0=h7b6447c_0
-  - sacrebleu=1.4.3=py_0
-  - sentencepiece=0.1.91=py38hbf85e49_3
-  - setuptools=50.3.1=py38h06a4308_1
-  - six=1.15.0=py38h06a4308_0
-  - sqlite=3.33.0=h62c20be_0
-  - tk=8.6.10=hbc83047_0
-  - typing=3.7.4.3=py38_0
-  - wheel=0.35.1=pyhd3eb1b0_0
-  - xz=5.2.5=h7b6447c_0
-  - zlib=1.2.11=h7b6447c_3
+  - _libgcc_mutex=0.1
+  - blas=1.0
+  - ca-certificates=2020.11.8
+  - certifi=2020.11.8
+  - gperftools=2.7
+  - intel-openmp=2020.2
+  - ld_impl_linux-64=2.33.1
+  - libedit=3.1.20191231
+  - libffi=3.3
+  - libgcc-ng=9.1.0
+  - libstdcxx-ng=9.1.0
+  - mkl=2020.2
+  - mkl-service=2.3.0
+  - mkl_fft=1.2.0
+  - mkl_random=1.1.1
+  - ncurses=6.2
+  - numpy=1.19.2
+  - numpy-base=1.19.2
+  - openssl=1.1.1h
+  - perl=5.32.0
+  - pip=20.2.4
+  - portalocker=2.0.0
+  - python=3.8.5
+  - python_abi=3.8
+  - readline=8.0
+  - sacrebleu=1.4.3
+  - sentencepiece=0.1.91
+  - setuptools=50.3.1
+  - six=1.15.0
+  - sqlite=3.33.0
+  - tk=8.6.10
+  - typing=3.7.4.3
+  - wheel=0.35.1
+  - xz=5.2.5
+  - zlib=1.2.11
 prefix: /home/daniel/Programming/CS695_NLP/assignment3/p3_conda
