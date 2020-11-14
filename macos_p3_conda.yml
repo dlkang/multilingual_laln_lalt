@@ -1,0 +1,46 @@
+name: /Users/daniel/Programming/Multilingual/p3_conda
+channels:
+  - powerai
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1
+  - blas=1.0
+  - ca-certificates=2020.10.14
+  - certifi=2020.6.20
+  - gperftools=2.7
+  - intel-openmp=2020.2
+  - libcxx=11.0.0
+  - libedit=3.1.20191231
+  - libffi=3.3
+  - libgfortran=5.0.0
+  - libgfortran5=9.3.0
+  - libopenblas=0.3.12
+  - llvm-openmp=11.0.0
+  - mkl=2020.2
+  - mkl-service=2.3.0
+  - mkl_fft=1.2.0
+  - mkl_random=1.1.1
+  - ncurses=6.2
+  - numpy=1.19.2
+  - numpy-base=1.19.2
+  - openblas=0.3.12
+  - openssl=1.1.1h
+  - perl=5.32.0
+  - pip=20.2.4
+  - portalocker=2.0.0
+  - python=3.8.5
+  - python_abi=3.8
+  - readline=8.0
+  - sacrebleu=1.4.3
+  - setuptools=50.3.1
+  - six=1.15.0
+  - sqlite=3.33.0
+  - tk=8.6.10
+  - typing=3.7.4.3
+  - wheel=0.35.1
+  - xz=5.2.5
+  - zlib=1.2.11
+  - pip:
+    - sentencepiece==0.1.94
+prefix: /Users/daniel/Programming/Multilingual/p3_conda

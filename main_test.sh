@@ -13,20 +13,18 @@ submodel_path=../submodels/
 # set the well-trained nmt models
 nmtmodel_path=../Ours-L24-RoBT/
 
-conda init bash
-
+conda init --all
 
 # get language information
 source ${zero_path}/scripts/data/common.sh
 
 function test {
-  
 src=$1
 ref=$2
 out=$3
 y=$4
   
-conda activate ${zero_path}/p2_conda
+source activate ${zero_path}/p2_conda
 # To evaluate Baseline Transformers, change the settings as follows:
 # 1. model_name="transformer",scope_name="transformer",\
 # 2. delete to_lang_vocab_file="${submodel_path}/vocab.zero.to_lang",\
@@ -42,7 +40,7 @@ tgt_test_file="$ref",\
 output_dir="${nmtmodel_path}",\
 test_output="$out.trans.txt"
 
-conda activate ${zero_path}/p3_conda
+source activate ${zero_path}/p3_conda
 python3 ${zero_path}/scripts/spm_decode.py \
   --model ${submodel_path}/sentencepiece.model \
   --input_format=id \
@@ -50,7 +48,7 @@ python3 ${zero_path}/scripts/spm_decode.py \
   
 # In our experiments, we train our sentencepiece model with the option "--character_coverage 0.9995 --input_sentence_size=10000000". This leads to '??' noisy outputs.
 sed -i 's/ ⁇ //g' $out.trans.post.txt
-conda activate ${zero_path}/p3_conda
+source activate ${zero_path}/p3_conda
 python3 -m sacrebleu $ref < $out.trans.post.txt > $out.trans.post.txt.sacrebleu
   
 }
@@ -60,7 +58,7 @@ function handle_source {
   lang=$2
   out=$3
 
-conda activate ${zero_path}/p3_conda
+source activate ${zero_path}/p3_conda
   python3 ${zero_path}/scripts/spm_encode.py \
     --model ${submodel_path}/sentencepiece.model \
     --output_format=id \
