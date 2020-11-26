@@ -1,4 +1,4 @@
-name: /home/daniel/Programming/CS695_NLP/assignment3/p3_conda
+name: p3_conda
 channels:
   - powerai
   - conda-forge
@@ -39,4 +39,4 @@ dependencies:
   - wheel=0.35.1
   - xz=5.2.5
   - zlib=1.2.11
-prefix: /home/daniel/Programming/CS695_NLP/assignment3/p3_conda
+prefix: ./p3_conda

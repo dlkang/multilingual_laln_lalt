@@ -3,15 +3,18 @@ channels:
   - defaults
 dependencies:
   - _libgcc_mutex=0.1
-  - _tflow_select=2.3.0
+  - _tflow_select=2.1.0
   - absl-py=0.8.1
   - astor=0.8.0
   - backports=1.0
   - backports.weakref=1.0.post1
   - blas=1.0
-  - c-ares=1.16.1
+  - c-ares=1.17.1
   - ca-certificates=2020.10.14
   - certifi=2020.6.20
+  - cudatoolkit=10.0.130
+  - cudnn=7.6.5
+  - cupti=10.0.130
   - enum34=1.1.6
   - funcsigs=1.0.2
   - futures=3.3.0
@@ -51,6 +54,7 @@ dependencies:
   - tensorflow=1.13.1
   - tensorflow-base=1.13.1
   - tensorflow-estimator=1.13.0
+  - tensorflow-gpu=1.13.1
   - termcolor=1.1.0
   - tk=8.6.10
   - traceback2=1.4.0
