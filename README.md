@@ -36,7 +36,9 @@ PuTTY uses .ppk files instead of .pem files. If you haven't already generated a 
 
 2. Use the following SSH command to connect to the instance:
    ssh -i /path/my-key-pair.pem ec2-user@public_dns_name
-
+----------------------Copy data folder from local to ec2 instance-----------------------------
+1. scp -i path/to/key file/to/copy user@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/file (To copy files)
+2. scp -i path/to/key -r directory/to/copy user@ec2-xx-xx-xxx-xxx.compute-1.amazonaws.com:path/to/directory (To copy entire directory)
 
 
 
